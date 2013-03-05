@@ -18,20 +18,27 @@
   <%= csrf_meta_tags %>
 
 
+  <!-- Included CSS Files (Uncompressed) -->
+  <!--
+  <link rel="stylesheet" href="stylesheets/foundation.css">
+  -->
+
+  <!-- Included CSS Files (Compressed)
+  <link rel="stylesheet" href="stylesheets/foundation.min.css">
+  <link rel="stylesheet" href="stylesheets/app.css">
+  <script src="javascripts/modernizr.foundation.js"></script>
+  -->
 </head>
 <body>
   <%= render :partial => 'layouts/nav' %>
-  <div class= 'row'>
-    <div class='twelve columns'> <%= yield %></div>
-
-
+  <div class='row'>
+    <div class='twelve columns'><%= yield %></div>
+  </div>
   <%= render :partial => 'layouts/footer' %>
-
   <script type="text/javascript">
      $(window).load(function() {
          $('#slider').orbit();
      });
   </script>
-
 </body>
 </html>
